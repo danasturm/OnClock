@@ -84,13 +84,12 @@ namespace OnClock
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1150, 454);
+            this.dataGridView1.Size = new System.Drawing.Size(868, 475);
             this.dataGridView1.TabIndex = 10;
-           
             // 
             // btn_submit
             // 
-            this.btn_submit.Location = new System.Drawing.Point(916, 614);
+            this.btn_submit.Location = new System.Drawing.Point(600, 637);
             this.btn_submit.Name = "btn_submit";
             this.btn_submit.Size = new System.Drawing.Size(115, 46);
             this.btn_submit.TabIndex = 12;
@@ -100,7 +99,7 @@ namespace OnClock
             // 
             // btn_backtoselect
             // 
-            this.btn_backtoselect.Location = new System.Drawing.Point(1070, 614);
+            this.btn_backtoselect.Location = new System.Drawing.Point(743, 637);
             this.btn_backtoselect.Name = "btn_backtoselect";
             this.btn_backtoselect.Size = new System.Drawing.Size(111, 46);
             this.btn_backtoselect.TabIndex = 11;
@@ -112,7 +111,7 @@ namespace OnClock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 725);
+            this.ClientSize = new System.Drawing.Size(911, 712);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.btn_backtoselect);
             this.Controls.Add(this.dataGridView1);

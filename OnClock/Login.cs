@@ -41,21 +41,28 @@ namespace OnClock
             this.Close();
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txt_pass_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
+            if (e.KeyChar.Equals(Keys.Enter))
             {
                 LoginForm();
             }
+          
             if (e.KeyChar == (char)Keys.Escape)
             {
                 this.Close();
             }
         }
-
+        private void txt_username_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Tab)
+            {
+                SendKeys.Send("{TAB}");
+            }
+        }
         private void LoginForm()
         {
-            DataTable result = Login(textBox1.Text, textBox2.Text);
+            DataTable result = Login(txt_username.Text, txt_pass.Text);
             if (result.Rows.Count == 1)
             {
                 this.Hide();
@@ -91,5 +98,7 @@ namespace OnClock
             conn.Close();
             return dt;
         }
+
+      
     }
 }
