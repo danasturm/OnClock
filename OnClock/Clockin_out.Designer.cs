@@ -41,7 +41,9 @@ namespace OnClock
             // 
             // btn_submit
             // 
-            this.btn_submit.Location = new System.Drawing.Point(625, 618);
+            this.btn_submit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_submit.Location = new System.Drawing.Point(635, 645);
             this.btn_submit.Name = "btn_submit";
             this.btn_submit.Size = new System.Drawing.Size(115, 46);
             this.btn_submit.TabIndex = 19;
@@ -51,7 +53,8 @@ namespace OnClock
             // 
             // btn_backtoselect
             // 
-            this.btn_backtoselect.Location = new System.Drawing.Point(778, 618);
+            this.btn_backtoselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_backtoselect.Location = new System.Drawing.Point(780, 645);
             this.btn_backtoselect.Name = "btn_backtoselect";
             this.btn_backtoselect.Size = new System.Drawing.Size(111, 46);
             this.btn_backtoselect.TabIndex = 18;
@@ -62,19 +65,19 @@ namespace OnClock
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 122);
+            this.dataGridView1.Location = new System.Drawing.Point(30, 140);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(857, 481);
+            this.dataGridView1.Size = new System.Drawing.Size(870, 475);
             this.dataGridView1.TabIndex = 17;
             // 
             // txt_employeename
             // 
             this.txt_employeename.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_employeename.Location = new System.Drawing.Point(200, 73);
+            this.txt_employeename.Location = new System.Drawing.Point(200, 75);
             this.txt_employeename.Name = "txt_employeename";
-            this.txt_employeename.Size = new System.Drawing.Size(296, 30);
+            this.txt_employeename.Size = new System.Drawing.Size(300, 30);
             this.txt_employeename.TabIndex = 16;
             this.txt_employeename.TextChanged += new System.EventHandler(this.txt_employeename_TextChanged);
             // 
@@ -83,7 +86,7 @@ namespace OnClock
             this.txt_employeeid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_employeeid.Location = new System.Drawing.Point(200, 15);
             this.txt_employeeid.Name = "txt_employeeid";
-            this.txt_employeeid.Size = new System.Drawing.Size(296, 30);
+            this.txt_employeeid.Size = new System.Drawing.Size(300, 30);
             this.txt_employeeid.TabIndex = 15;
             this.txt_employeeid.TextChanged += new System.EventHandler(this.txt_employeeid_TextChanged);
             // 
@@ -91,7 +94,7 @@ namespace OnClock
             // 
             this.lbl_employeename.AutoSize = true;
             this.lbl_employeename.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_employeename.Location = new System.Drawing.Point(42, 79);
+            this.lbl_employeename.Location = new System.Drawing.Point(25, 85);
             this.lbl_employeename.Name = "lbl_employeename";
             this.lbl_employeename.Size = new System.Drawing.Size(156, 25);
             this.lbl_employeename.TabIndex = 14;
@@ -101,7 +104,7 @@ namespace OnClock
             // 
             this.lbl_employeeid.AutoSize = true;
             this.lbl_employeeid.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_employeeid.Location = new System.Drawing.Point(42, 15);
+            this.lbl_employeeid.Location = new System.Drawing.Point(25, 20);
             this.lbl_employeeid.Name = "lbl_employeeid";
             this.lbl_employeeid.Size = new System.Drawing.Size(123, 25);
             this.lbl_employeeid.TabIndex = 13;
@@ -111,7 +114,7 @@ namespace OnClock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 685);
+            this.ClientSize = new System.Drawing.Size(928, 744);
             this.Controls.Add(this.btn_submit);
             this.Controls.Add(this.btn_backtoselect);
             this.Controls.Add(this.dataGridView1);
@@ -120,6 +123,7 @@ namespace OnClock
             this.Controls.Add(this.lbl_employeename);
             this.Controls.Add(this.lbl_employeeid);
             this.Name = "Clockin_out";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clockin_out";
             this.Load += new System.EventHandler(this.Clockin_out_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

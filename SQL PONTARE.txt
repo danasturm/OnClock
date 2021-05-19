@@ -1,0 +1,73 @@
+create database Pontare
+
+create table Employee
+(
+IdMember int not null IDENTITY(1,1) PRIMARY KEY,
+FirstName varchar(100) NOT NULL,
+LastName varchar(100) NOT NULL,
+Department varchar(100) NOT NULL
+)
+
+insert into Employee(FirstName, LastName, Department)
+values ('Maria','Pop','IT')
+
+insert into Employee(FirstName, LastName, Department)
+values ('Alex','Vasile','Financiar')
+
+insert into Employee(FirstName, LastName, Department)
+values ('Ioan','Dan','HR')
+
+insert into Employee(FirstName, LastName, Department)
+values ('Carmen','Ilie','HR')
+
+insert into Employee(FirstName, LastName, Department)
+values ('Ilinca','Preda','IT')
+
+create table LogIn
+(
+Username varchar(100) not null primary key,
+Password varchar(100) not null,
+Role varchar (15) not null
+)
+
+insert into LogIn
+values ('admin', 'admin', 'Admin')
+
+insert into LogIn
+values('employee', 'employee', 'User')
+
+create table LocationFactory
+(
+IdLocation int not null IDENTITY(1,1) PRIMARY KEY,
+Country varchar (50) null default ('Romania') ,
+LocationFactory varchar(50) null default ('Timisoara') ,
+Gate varchar(250) not null
+)
+
+insert into LocationFactory(Gate)
+values ('strada Lacului, nr 33')
+
+insert into LocationFactory(Gate)
+values ('strada Pomului, nr 2')
+
+create table Onclock
+(
+IdOnclock int not null IDENTITY(1,1) PRIMARY KEY,
+IdMember int NOT NULL,
+IdLocation int NOT NULL,
+ClockIn datetime null,
+ClockOut datetime null,
+
+
+CONSTRAINT [fk_OnClock_Employee] foreign Key(IdMember) References [Employee](IdMember),
+CONSTRAINT [fk_OnClock_LocationFactory] foreign Key(IdLocation) References [LocationFactory](IdLocation)
+)
+
+
+create table AdminSetLocation
+(
+IdAdminSetLocation int not null IDENTITY(1,1) PRIMARY KEY,
+IdLocation int NOT NULL,
+
+CONSTRAINT [fk_AdminSetLocation_LocationFactory] foreign Key(IdLocation) References [LocationFactory](IdLocation)
+)

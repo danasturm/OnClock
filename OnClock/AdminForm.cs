@@ -13,6 +13,7 @@ namespace OnClock
 {
     public partial class AdminForm : Form
     {
+        
         public AdminForm()
         {
             InitializeComponent();
@@ -69,7 +70,7 @@ namespace OnClock
         private void AdminForm_Load(object sender, EventArgs e)
         {
             SqlConnection conn = ConnectToDb();
-            string sqlQuery = "select Gate from LocationFactory";
+            string sqlQuery = "select IdLocation, Gate from LocationFactory";
             SqlCommand sqlCommand = new SqlCommand(sqlQuery, conn);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sqlCommand);
             DataTable dt = new DataTable();
@@ -80,7 +81,25 @@ namespace OnClock
 
         private void btn_submitadmin_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = ConnectToDb();
 
+            string sql = "insert into AdminSetLocation(IdLocation) values (@IdLocation)";
+            SqlCommand command = new SqlCommand(sql, conn);
+            SqlParameter idLocation = command.Parameters.Add("@IdLocation", SqlDbType.Int);
+            int index = dgw_gate.SelectedCells[0].RowIndex;
+            idLocation.Value = dgw_gate.Rows[index].Cells[0].Value;
+           
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            adapter.InsertCommand = command;
+            adapter.InsertCommand.ExecuteNonQuery();
+
+            MessageBox.Show("Gate changed successfully");
+            this.Hide();
+            MainForm mf = new MainForm();
+            mf.Show();
+
+            CloseConnection(conn, command);
         }
     }
 }

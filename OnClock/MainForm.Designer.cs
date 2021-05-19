@@ -37,8 +37,9 @@ namespace OnClock
             // btn_clockin
             // 
             this.btn_clockin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btn_clockin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_clockin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clockin.Location = new System.Drawing.Point(65, 59);
+            this.btn_clockin.Location = new System.Drawing.Point(75, 180);
             this.btn_clockin.Name = "btn_clockin";
             this.btn_clockin.Size = new System.Drawing.Size(191, 87);
             this.btn_clockin.TabIndex = 0;
@@ -48,9 +49,11 @@ namespace OnClock
             // 
             // btn_clockout
             // 
+            this.btn_clockout.AutoSize = true;
             this.btn_clockout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_clockout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_clockout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clockout.Location = new System.Drawing.Point(353, 59);
+            this.btn_clockout.Location = new System.Drawing.Point(357, 180);
             this.btn_clockout.Name = "btn_clockout";
             this.btn_clockout.Size = new System.Drawing.Size(191, 87);
             this.btn_clockout.TabIndex = 1;
@@ -60,7 +63,8 @@ namespace OnClock
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(427, 330);
+            this.btn_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.Location = new System.Drawing.Point(431, 442);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(117, 45);
             this.btn_logout.TabIndex = 2;
@@ -72,14 +76,16 @@ namespace OnClock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(610, 404);
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ClientSize = new System.Drawing.Size(668, 544);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_clockout);
             this.Controls.Add(this.btn_clockin);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -41,7 +41,7 @@ namespace OnClock
             // 
             this.btn_login.BackColor = System.Drawing.SystemColors.Info;
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(179, 250);
+            this.btn_login.Location = new System.Drawing.Point(413, 264);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(172, 60);
             this.btn_login.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace OnClock
             // 
             this.btn_exit.BackColor = System.Drawing.SystemColors.Info;
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_exit.Location = new System.Drawing.Point(382, 250);
+            this.btn_exit.Location = new System.Drawing.Point(413, 405);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(172, 60);
             this.btn_exit.TabIndex = 1;
@@ -64,7 +64,7 @@ namespace OnClock
             // txt_username
             // 
             this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.Location = new System.Drawing.Point(179, 66);
+            this.txt_username.Location = new System.Drawing.Point(210, 73);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(375, 30);
             this.txt_username.TabIndex = 2;
@@ -73,15 +73,17 @@ namespace OnClock
             // txt_pass
             // 
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pass.Location = new System.Drawing.Point(179, 165);
+            this.txt_pass.Location = new System.Drawing.Point(210, 172);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(375, 30);
             this.txt_pass.TabIndex = 3;
             this.txt_pass.UseSystemPasswordChar = true;
-            
+            // 
+            // lbl_username
+            // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.Location = new System.Drawing.Point(44, 67);
+            this.lbl_username.Location = new System.Drawing.Point(75, 74);
             this.lbl_username.Name = "lbl_username";
             this.lbl_username.Size = new System.Drawing.Size(129, 29);
             this.lbl_username.TabIndex = 4;
@@ -91,7 +93,7 @@ namespace OnClock
             // 
             this.lbl_password.AutoSize = true;
             this.lbl_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_password.Location = new System.Drawing.Point(44, 166);
+            this.lbl_password.Location = new System.Drawing.Point(75, 173);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(120, 29);
             this.lbl_password.TabIndex = 5;
@@ -103,7 +105,7 @@ namespace OnClock
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(647, 359);
+            this.ClientSize = new System.Drawing.Size(668, 544);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.txt_pass);
@@ -111,6 +113,7 @@ namespace OnClock
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_login);
             this.Name = "LogIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
             this.ResumeLayout(false);
             this.PerformLayout();

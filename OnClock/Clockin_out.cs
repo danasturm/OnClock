@@ -78,13 +78,22 @@ namespace OnClock
         {
             SqlConnection conn = ConnectToDb();
 
-            string sql = "insert into OnClock(IdMember, ClockOut) values (@IdMember, @ClockOut)";
+            string sql = "insert into OnClock(IdMember, IdLocation, ClockOut) values (@IdMember, @IdLocation, @ClockOut)";
             SqlCommand command = new SqlCommand(sql, conn);
             SqlParameter idMember = command.Parameters.Add("@IdMember", SqlDbType.Int);
+            SqlParameter idLocation = command.Parameters.Add("@IdLocation", SqlDbType.Int);
             SqlParameter clockOut = command.Parameters.Add("@ClockOut", SqlDbType.DateTime);
             int index = dataGridView1.SelectedCells[0].RowIndex;
             idMember.Value = dataGridView1.Rows[index].Cells[0].Value;
             clockOut.Value = DateTime.Now;
+
+            string sqlQuery = "select IdLocation from AdminSetLocation";
+            SqlCommand command2 = new SqlCommand(sqlQuery, conn);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command2);
+            DataTable dt = new DataTable();
+            dataAdapter.Fill(dt);
+            DataRow dataRow = dt.Rows[dt.Rows.Count - 1];
+            idLocation.Value = Convert.ToInt32(dataRow["IdLocation"]);
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             adapter.InsertCommand = command;

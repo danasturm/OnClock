@@ -32,7 +32,7 @@ namespace OnClock
             // 
             this.btn_logoutadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logoutadmin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_logoutadmin.Location = new System.Drawing.Point(364, 392);
+            this.btn_logoutadmin.Location = new System.Drawing.Point(364, 391);
             this.btn_logoutadmin.Name = "btn_logoutadmin";
             this.btn_logoutadmin.Size = new System.Drawing.Size(203, 64);
             this.btn_logoutadmin.TabIndex = 1;
@@ -44,7 +44,7 @@ namespace OnClock
             // 
             this.btn_submitadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_submitadmin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_submitadmin.Location = new System.Drawing.Point(73, 392);
+            this.btn_submitadmin.Location = new System.Drawing.Point(161, 315);
             this.btn_submitadmin.Name = "btn_submitadmin";
             this.btn_submitadmin.Size = new System.Drawing.Size(203, 64);
             this.btn_submitadmin.TabIndex = 4;
@@ -114,7 +114,7 @@ namespace OnClock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 545);
+            this.ClientSize = new System.Drawing.Size(668, 544);
             this.Controls.Add(this.dgw_gate);
             this.Controls.Add(this.txt_location);
             this.Controls.Add(this.txt_country);
@@ -124,6 +124,7 @@ namespace OnClock
             this.Controls.Add(this.btn_submitadmin);
             this.Controls.Add(this.btn_logoutadmin);
             this.Name = "AdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.Load += new System.EventHandler(this.AdminForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgw_gate)).EndInit();
